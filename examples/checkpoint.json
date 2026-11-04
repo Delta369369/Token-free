@@ -1,0 +1,12 @@
+{
+  "project": "adon-ai",
+  "session_id": "session-demo-001",
+  "objective": "Definir o núcleo de economia contextual do ADON AI",
+  "done": ["Arquitetura selecionada", "Separação entre memória canônica e índice relacional"],
+  "decisions": ["SQLite canônico; Graphiti derivado, opt-in", "Session Handoff 3.0 coordena checkpoints sem substituir compactação nativa"],
+  "pending": ["Auditar implementações reais dos módulos Adon", "Configurar adaptadores de telemetria por provedor"],
+  "next_action": "Validar interface de recuperação e estado atual do repositório",
+  "git_commit": null,
+  "source_refs": ["architecture:2026-11-04"],
+  "event_ids": []
+}

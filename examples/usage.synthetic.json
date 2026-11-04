@@ -1,0 +1,17 @@
+{
+ "project": "adon-ai",
+ "task_id": "synthetic-task-01",
+ "run_id": "optimized-01",
+ "provider": "openai",
+ "model": "demo-model",
+ "module": "handoff",
+ "input_uncached": 650,
+ "cache_read": 1000,
+ "cache_write": 0,
+ "output_tokens": 320,
+ "billed_usd": null,
+ "elapsed_ms": 1450,
+ "quality_pass": true,
+ "retries": 0,
+ "source": "synthetic"
+}
