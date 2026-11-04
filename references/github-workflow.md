@@ -9,8 +9,8 @@ The ChatGPT GitHub connection retrieves permitted repository content on demand; 
 ## Token-conscious read sequence
 
 1. Confirm the exact `owner/repository` and requested branch, tag, or commit. Do not guess among similarly named repositories.
-2. Search within that repository using a distinctive path, symbol, or error. Keep the result count small.
-3. Fetch only the relevant file or line range when the search excerpt is insufficient. Do not enumerate or load the whole repository by default.
+2. Search within that repository using a distinctive path, symbol, or error. Keep the result count small. If search returns no results, do not infer that the file is absent: newly added repositories may not yet be code-search indexed.
+3. If the connector can list the repository tree, use it to identify likely paths; otherwise use paths supplied by the user or project docs. Fetch only the relevant file or line range. Do not enumerate or load the whole repository by default.
 4. Ask the agent to report the exact paths/ref it used. If continuing later, save the repository URL and commit/ref in checkpoint `source_refs`; store the commit in `git_commit` when known.
 5. Record only durable decisions or verified results in SQLite. A GitHub reference can be an ordinary external `source_ref`; reserve `src:<id>` for sources registered in the local ADON database.
 
@@ -33,3 +33,4 @@ Use a commit-pinned URL when the commit is known. If only the default branch is 
 ## Limits
 
 This workflow reduces unnecessary manual copying and broad context loading; it does not guarantee fewer model tokens. Retrieved excerpts still enter the model context. ADON does not implement GitHub search, file fetch, synchronization, webhooks, or token accounting for connector calls.
+
