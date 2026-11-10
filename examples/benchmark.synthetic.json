@@ -1,8 +1,0 @@
-{
-  "runs": [
-    {"task_id":"task-A","variant":"baseline","input_uncached":9000,"cache_read":1500,"cache_write":0,"output_tokens":1500,"billed_usd":0.30,"quality_pass":true,"source":"synthetic"},
-    {"task_id":"task-A","variant":"optimized","input_uncached":3000,"cache_read":2500,"cache_write":0,"output_tokens":1400,"billed_usd":0.18,"quality_pass":true,"source":"synthetic"},
-    {"task_id":"task-B","variant":"baseline","input_uncached":11000,"cache_read":1000,"cache_write":0,"output_tokens":1600,"billed_usd":0.34,"quality_pass":true,"source":"synthetic"},
-    {"task_id":"task-B","variant":"optimized","input_uncached":4000,"cache_read":2000,"cache_write":0,"output_tokens":1500,"billed_usd":0.21,"quality_pass":true,"source":"synthetic"}
-  ]
-}
